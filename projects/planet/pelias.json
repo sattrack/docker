@@ -42,12 +42,12 @@
     },
     "openstreetmap": {
       "download": [
-        { "sourceURL": "https://s3.amazonaws.com/osm-pds/2018/planet-181105.osm.pbf" }
+        { "sourceURL": "https://s3.amazonaws.com/osm-pds/2019/planet-190114.osm.pbf" }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
       "import": [{
-        "filename": "planet-181105.osm.pbf"
+        "filename": "planet-190114.osm.pbf"
       }]
     },
     "openaddresses": {
