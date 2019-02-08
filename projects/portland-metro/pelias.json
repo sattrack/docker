@@ -49,7 +49,7 @@
       "datapath": "/data/csv",
       "files": [],
       "download": [
-        "https://raw.githubusercontent.com/pelias/csv-importer/master/data/example.csv"
+        "https://raw.githubusercontent.com/pelias/csv-importer/57252d307a81603dbc708d12df98a40cc3e3d766/data/example.csv"
       ]
     },
     "geonames": {
