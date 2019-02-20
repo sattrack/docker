@@ -62,10 +62,9 @@
     },
     "whosonfirst": {
       "datapath": "/data/whosonfirst",
-      "importVenues": false,
       "importPostalcodes": true,
       "importPlace": [
-        "85632793"
+        "85633009"
       ]
     },
     "interpolation": {

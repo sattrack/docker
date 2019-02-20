@@ -1,0 +1,114 @@
+{
+  "logger": {
+    "level": "info",
+    "timestamp": false
+  },
+  "esclient": {
+    "hosts": [
+      { "host": "elasticsearch" }
+    ]
+  },
+  "elasticsearch": {
+    "settings": {
+      "index": {
+        "refresh_interval": "10s",
+        "number_of_replicas": "0",
+        "number_of_shards": "4"
+      }
+    }
+  },
+  "acceptance-tests": {
+    "endpoints": {
+      "docker": "http://api:4000/v1/"
+    }
+  },
+  "api": {
+    "textAnalyzer": "libpostal",
+    "services": {
+      "pip": { "url": "http://pip:4200" },
+      "libpostal": { "url": "http://libpostal:4400" },
+      "placeholder": { "url": "http://placeholder:4100" },
+      "interpolation": { "url": "http://interpolation:4300" }
+    }
+  },
+  "imports": {
+    "adminLookup": {
+      "enabled": true
+    },
+    "geonames": {
+      "datapath": "/data/geonames",
+      "countryCode": "BR"
+    },
+    "openstreetmap": {
+      "download": [
+        { "sourceURL": "http://download.geofabrik.de/south-america/brazil-latest.osm.pbf" }
+      ],
+      "leveldbpath": "/tmp",
+      "datapath": "/data/openstreetmap",
+      "import": [{
+        "filename": "brazil-latest.osm.pbf"
+      }]
+    },
+    "openaddresses": {
+      "datapath": "/data/openaddresses",
+      "files": [
+        "br/ac/statewide.csv",
+        "br/al/statewide.csv",
+        "br/am/statewide.csv",
+        "br/ap/statewide.csv",
+        "br/ba/statewide.csv",
+        "br/ce/statewide.csv",
+        "br/df/statewide.csv",
+        "br/es/statewide.csv",
+        "br/es/vitoria.csv",
+        "br/go/statewide.csv",
+        "br/ma/statewide.csv",
+        "br/mg/statewide.csv",
+        "br/ms/campo_grande.csv",
+        "br/ms/statewide.csv",
+        "br/mt/statewide.csv",
+        "br/pa/statewide.csv",
+        "br/pb/statewide.csv",
+        "br/pe/recife.csv",
+        "br/pe/statewide.csv",
+        "br/pi/statewide.csv",
+        "br/pr/curitiba.csv",
+        "br/pr/statewide.csv",
+        "br/rj/rio_de_janeiro.csv",
+        "br/rj/statewide.csv",
+        "br/rn/statewide.csv",
+        "br/ro/statewide.csv",
+        "br/rr/statewide.csv",
+        "br/rs/canoas.csv",
+        "br/rs/caxias_do_sul.csv",
+        "br/rs/statewide.csv",
+        "br/sc/joinville.csv",
+        "br/sc/statewide.csv",
+        "br/se/statewide.csv",
+        "br/sp/guarulhos.csv",
+        "br/sp/santos.csv",
+        "br/sp/statewide.csv",
+        "br/to/statewide"
+      ]
+    },
+    "polyline": {
+      "datapath": "/data/polylines",
+      "files": [ "extract.0sv" ]
+    },
+    "whosonfirst": {
+      "datapath": "/data/whosonfirst",
+      "importPostalcodes": true,
+      "importPlace": "102191575"
+    },
+    "interpolation": {
+      "download": {
+        "tiger": {
+          "datapath": "/data/tiger",
+          "states": [
+            { "state_code": 41, "county_code": 67, "name": "Washington County, OR" }
+          ]
+        }
+      }
+    }
+  }
+}
